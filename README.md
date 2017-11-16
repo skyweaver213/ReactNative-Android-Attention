@@ -16,3 +16,4 @@
   }
   另外LayoutAnimation.configureNext(config: Config, onAnimationDidEnd?: Function)， 
   ios有动画结束callback，android需要自己用 setTimeout之类模拟
+* JSON.stringify('{}') android平台上是 'null' 而不是 '{}'
