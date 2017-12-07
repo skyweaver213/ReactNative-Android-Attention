@@ -17,3 +17,5 @@
   另外LayoutAnimation.configureNext(config: Config, onAnimationDidEnd?: Function)， 
   ios有动画结束callback，android需要自己用 setTimeout之类模拟
 * JSON.stringify('{}') android平台上是 'null' 而不是 '{}'
+* Android Modal会自带一个onRequestClose 属性，而且是必传的，不然浮层关闭会触发这个事件就会导致error，详情参考
+  https://kylewbanks.com/blog/why-react-native-modals-require-onrequestclose-callback-property-on-android
