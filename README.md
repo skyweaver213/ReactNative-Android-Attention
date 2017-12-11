@@ -19,3 +19,4 @@
 * JSON.stringify('{}') android平台上是 'null' 而不是 '{}'
 * Android Modal会自带一个onRequestClose 属性，而且是必传的，不然浮层关闭会触发这个事件就会导致error，详情参考
   https://kylewbanks.com/blog/why-react-native-modals-require-onrequestclose-callback-property-on-android
+* Android真机下 import {cloneDeep} from 'lodash' ，cloneDeep如果深度拷贝一个例如1M的数据， 会存在性能问题，可能需要4s~ 5s;取代方法 可以先     JSON.parse(JSON.stringify(obj))
