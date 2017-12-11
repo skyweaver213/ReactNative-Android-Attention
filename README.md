@@ -20,3 +20,4 @@
 * Android Modal会自带一个onRequestClose 属性，而且是必传的，不然浮层关闭会触发这个事件就会导致error，详情参考
   https://kylewbanks.com/blog/why-react-native-modals-require-onrequestclose-callback-property-on-android
 * Android真机下 import {cloneDeep} from 'lodash' ，cloneDeep如果深度拷贝一个例如1M的数据， 会存在性能问题，可能需要4s~ 5s;取代方法 可以先     JSON.parse(JSON.stringify(obj))
+* Android, Text标签设置opacity 如果带color属性，设置好像没有生效，(|变淡)验证代码：<Text key={i}><Text style={{ color: '#f3cc99', opacity: 0.2 }}>{' | '}</Text><Text>{item}</Text></Text>， 如果有类似需求，可以设置一个淡一点的颜色来代替。
