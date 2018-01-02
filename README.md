@@ -11,7 +11,7 @@
 * 代码里如果使用了 ref，this.refs.$ref ，push跳转切换页面时候可能会卡顿百来毫秒、甚至数百毫秒
 * 背景渐变方法 不适宜使用代码渲染实现，android大量的渲染计算会造成页面卡顿，界面即使看不见变化，代码可能存在不停渲染
 * 使用LayoutAnimation 需要设置这行代码开启； 
-  if (latform.OS === 'android') {
+  if (Platform.OS === 'android') {
 	  UIManager.setLayoutAnimationEnabledExperimental(true)
   }
   另外LayoutAnimation.configureNext(config: Config, onAnimationDidEnd?: Function)， 
